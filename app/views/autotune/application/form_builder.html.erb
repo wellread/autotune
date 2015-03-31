@@ -1,0 +1,166 @@
+<!-- Beautify (used by EditorField) -->
+<script src="http://alpacajs.org/lib/js-beautify/js/lib/beautify.js" type="text/javascript" charset="utf-8"></script>
+<script src="http://alpacajs.org/lib/js-beautify/js/lib/beautify-css.js" type="text/javascript" charset="utf-8"></script>
+<script src="http://alpacajs.org/lib/js-beautify/js/lib/beautify-html.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- typeahead.js -->
+<script src="http://alpacajs.org/lib/typeahead.js/dist/bloodhound.min.js" type="text/javascript"></script>
+<script src="http://alpacajs.org/lib/typeahead.js/dist/typeahead.bundle.min.js" type="text/javascript"></script>
+
+<!-- datatables (for TableField) -->
+<script src="http://alpacajs.org/lib/datatables/media/js/jquery.dataTables.js" type="text/javascript"></script>
+<link type="text/css" href="http://alpacajs.org/lib/datatables/media/css/jquery.dataTables.css" rel="stylesheet"/>
+<script src="http://alpacajs.org/lib/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.js" type="text/javascript"></script>
+<link type="text/css" href="http://alpacajs.org/lib/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css" rel="stylesheet"/>
+
+<!-- ckeditor (for the ckeditor field) -->
+<script src="http://alpacajs.org/lib/ckeditor/ckeditor.js" type="text/javascript"></script>
+
+<!-- fileupload control (for UploadField) -->
+<link rel="stylesheet" type="text/css" href="http://alpacajs.org/lib/jquery-file-upload/css/jquery.fileupload.css"/>
+<link rel="stylesheet" type="text/css" href="http://alpacajs.org/lib/jquery-file-upload/css/jquery.fileupload-ui.css"/>
+<script src="http://alpacajs.org/lib/jquery-file-upload/js/vendor/jquery.ui.widget.js"></script>
+<script src="http://alpacajs.org/lib/jquery-file-upload/js/jquery.iframe-transport.js"></script>
+<script src="http://alpacajs.org/lib/jquery-file-upload/js/jquery.fileupload.js"></script>
+<script src="http://alpacajs.org/lib/jquery-file-upload/js/jquery.fileupload-process.js"></script>
+<script src="http://alpacajs.org/lib/jquery-file-upload/js/jquery.fileupload-ui.js"></script>
+
+<!-- handsontable (for GridField) -->
+<script src="http://alpacajs.org/lib/handsontable/dist/jquery.handsontable.full.js"></script>
+<link rel="stylesheet" media="screen" href="http://alpacajs.org/lib/handsontable/dist/jquery.handsontable.full.css"/>
+
+<!-- moment for date and datetime controls -->
+<script src="http://alpacajs.org/lib/moment/min/moment-with-locales.min.js"></script>
+<!-- bootstrap datetimepicker for date and datetime controls -->
+<script src="http://alpacajs.org/lib/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+<link rel="stylesheet" media="screen" href="http://alpacajs.org/lib/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css"/>
+
+<!-- bootstrap-timepicker for time field -->
+<script src="http://alpacajs.org/lib/bootstrap-3-timepicker/js/bootstrap-timepicker.js"></script>
+<link rel="stylesheet" media="screen" href="http://alpacajs.org/lib/bootstrap-3-timepicker/css/bootstrap-timepicker.css"/>
+
+<!-- bootstrap-multiselect for time field -->
+<script src="http://alpacajs.org/lib/bootstrap-multiselect/js/bootstrap-multiselect.js"></script>
+<link rel="stylesheet" media="screen" href="http://alpacajs.org/lib/bootstrap-multiselect/css/bootstrap-multiselect.css"/>
+
+<!-- jQuery Price Format for currency field -->
+<script type="text/javascript" src="http://alpacajs.org/lib/jquery-price-format/jquery.price_format.min.js"></script>
+
+<!-- ACE editor -->
+<script src="http://alpacajs.org/lib/ace-builds/src-min-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- jQuery UI for draggable support -->
+<script src="http://alpacajs.org/lib/jquery-ui/jquery-ui.js" type="text/javascript" charset="utf-8"></script>
+
+<div class="container-fluid">
+  <%=stylesheet_link_tag 'autotune/form_builder', media: 'all' %>
+  <%=javascript_include_tag 'autotune/form_builder' %>
+  <div class="row">
+    <div class="col-md-12">
+        <div>
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#source" data-toggle="tab" class="tab-item tab-item-source">Source</a></li>
+                <li><a href="#designer" data-toggle="tab" class="tab-item tab-item-designer">Designer</a></li>
+                <li><a href="#view" data-toggle="tab" class="tab-item tab-item-view">View</a></li>
+                <li><a href="#code" data-toggle="tab" class="tab-item tab-item-code">Code</a></li>
+                <li><a href="#loadsave" data-toggle="tab" class="tab-item tab-item-loadsave">Load / Save</a></li>
+            </ul>
+        </div>
+        <div class="tab-content">
+            <div class="tab-pane active" id="source">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div>
+                            <ul class="nav nav-tabs">
+                                <li class="active"><a href="#schema" data-toggle="tab" class="tab-source-schema">Schema</a></li>
+                                <li><a href="#options" data-toggle="tab" class="tab-source-options">Options</a></li>
+                                <li><a href="#data" data-toggle="tab" class="tab-source-data">Data</a></li>
+                            </ul>
+                        </div>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="schema">
+                            </div>
+                            <div class="tab-pane" id="options">
+                            </div>
+                            <div class="tab-pane" id="data">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div>
+                            <ul class="nav nav-tabs">
+                                <li class="active"><a href="#preview" data-toggle="tab">Preview</a></li>
+                            </ul>
+                        </div>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="preview">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div id="previewDiv"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="designer">
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div id="designerDiv"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div>
+                                    <ul class="nav nav-tabs">
+                                        <li class="active"><a href="#types" data-toggle="tab">Types</a></li>
+                                        <li><a href="#basic" data-toggle="tab">Basic</a></li>
+                                        <li><a href="#advanced" data-toggle="tab">Advanced</a></li>
+                                    </ul>
+                                </div>
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="types"></div>
+                                    <div class="tab-pane" id="basic"></div>
+                                    <div class="tab-pane" id="advanced"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="view">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="viewDiv"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="code">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="codeDiv"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="loadsave">
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <button class="btn btn-default load-button">Load Form</button>
+                        <br/>
+                        <br/>
+                        <button class="btn btn-default save-button">Save Form</button>
+                        <br/>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>

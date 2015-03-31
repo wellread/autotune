@@ -9,6 +9,8 @@ module Autotune
 
     helper_method :current_user, :signed_in?, :omniauth_path, :login_path
 
+    def form_builder; end
+
     def self.model(klass = nil)
       return @model if klass.nil?
       @model = klass
